@@ -8,7 +8,9 @@
 {{-- Banner (desktop only) --}}
 <div class="hidden md:block">
     <div class="container-960 py-2">
-        <img src="{{ asset('assets/banner.png') }}" alt="Sports Warehouse banner" class="w-full h-auto block">
+        <a href="{{ route('categories.show', 'balls') }}">
+            <img src="{{ asset('assets/banner.png') }}" alt="Shop our range of sports balls" class="w-full h-auto block">
+        </a>
     </div>
 </div>
 
