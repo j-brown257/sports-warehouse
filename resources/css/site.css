@@ -1,0 +1,86 @@
+/* =========================================================
+   Sports Warehouse — site styles
+   Semantic shortcut classes built on top of Tailwind utilities
+   using @apply (matches the EventHub teacher's pattern)
+   ========================================================= */
+
+/* --- Typography ---------------------------------------- */
+
+.h1 { @apply text-3xl md:text-4xl font-bold leading-tight text-gray-900 mb-4; }
+.h2 { @apply text-2xl font-normal leading-snug; }
+.h3 { @apply text-lg font-normal; }
+
+
+/* --- Layout containers --------------------------------- */
+
+.container-960 { @apply max-w-[960px] mx-auto px-5; }
+
+
+/* --- Orange "pill" heading --- */
+
+.pill-heading {
+    @apply bg-sw-orange text-white px-5 py-2.5 rounded-l-[40px];
+}
+
+.pill-heading h1,
+.pill-heading h2,
+.pill-heading h3 {
+    @apply text-lg font-normal m-0 text-white;
+}
+
+
+/* --- Product card --- */
+
+.product-card {
+    @apply bg-white border border-gray-300 rounded-lg text-center p-4;
+}
+
+
+/* --- Footer list with custom dark "bullets" --- */
+
+.footer-list {
+    @apply space-y-2.5 text-sm list-none p-0 m-0;
+}
+
+.footer-list li {
+    @apply relative pl-[18px];
+}
+
+.footer-list li::before {
+    content: "";
+    @apply absolute left-0 top-[7px] w-[10px] h-[6px] bg-black/30 rounded-l-full;
+}
+
+/* --- Contact form styles --- */
+
+.contact-card {
+    @apply bg-white p-5 md:p-8;
+}
+
+.contact-fieldset {
+    @apply border border-gray-300 rounded p-4 md:p-6;
+}
+
+.contact-legend {
+    @apply px-2 text-lg text-sw-teal;
+}
+
+.contact-label {
+    @apply block mb-2 text-base text-sw-grey;
+}
+
+.contact-input {
+    @apply w-full px-3.5 py-3 border border-gray-300 rounded text-sw-grey bg-white focus:outline-2 focus:outline-sw-blue focus:border-sw-blue;
+}
+
+.contact-submit {
+    @apply w-full md:w-auto md:min-w-[130px] h-9 px-6 bg-sw-teal text-white text-lg font-normal rounded hover:bg-sw-orange transition-colors;
+}
+
+.alert-success {
+    @apply my-4 p-4 bg-green-100 border border-green-600 text-green-800 rounded;
+}
+
+.alert-error {
+    @apply my-4 p-4 bg-red-100 border border-red-600 text-red-800 rounded;
+}
