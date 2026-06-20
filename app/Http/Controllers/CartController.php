@@ -22,11 +22,12 @@ public function index()
 
 public function add(Request $request, $itemId)
 {
+    // Look up the item by ID, and if not found, throw a 404 error.
     $item = Item::find($itemId);
     if (! $item) {
         abort(404);
     }
-
+// Confirm a positive integer for the quantity, defaulting to 1 if not provided or invalid.
     $qty = max(1, (int) $request->input('qty', 1));
 
     $price = (! is_null($item->salePrice) && $item->salePrice > 0)
@@ -34,10 +35,11 @@ public function add(Request $request, $itemId)
         : $item->price;
 
     $cart = session('cart', []);
-
+// If the item is already in the cart, just add to the quantity. Otherwise, add a new line for it.
     if (isset($cart[$itemId])) {
         $cart[$itemId]['qty'] += $qty;          
     } else {
+        // Just store the bits needed to display the cart and calculate totals.
         $cart[$itemId] = [
             'itemId' => $item->itemId,
             'name'   => $item->itemName,
