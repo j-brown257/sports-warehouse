@@ -19,7 +19,7 @@
                 <p class="text-lg">There are no products in this category yet.</p>
                 <p class="mt-2">
                     Please check back soon, or
-                    <a href="{{ route('home') }}" class="text-sw-blue hover:underline">browse our home page</a>.
+                    <a href="{{ route('home') }}" class="text-sw-teal hover:underline">browse our home page</a>.
                 </p>
             </div>
 
@@ -36,7 +36,7 @@
 
                         <p class="m-0">
                             @if (!is_null($item->salePrice) && $item->salePrice > 0)
-                                <span class="text-sw-orange text-lg font-bold">${{ number_format($item->salePrice, 2) }}</span>
+                                <span class="text-sw-orange-dark text-lg font-bold">${{ number_format($item->salePrice, 2) }}</span>
                                 <span class="line-through text-gray-400 text-sm ml-1">${{ number_format($item->price, 2) }}</span>
                             @else
                                 <span class="text-lg font-bold text-gray-800">${{ number_format($item->price, 2) }}</span>

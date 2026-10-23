@@ -24,7 +24,7 @@
             <div class="text-center py-12 text-sw-grey">
                 <p class="text-lg">Use the search bar at the top of the page to find products by name.</p>
                 <p class="mt-2">
-                    Or <a href="{{ route('products.index') }}" class="text-sw-blue hover:underline">browse all products</a>.
+                    Or <a href="{{ route('products.index') }}" class="text-sw-teal hover:underline">browse all products</a>.
                 </p>
             </div>
 
@@ -36,7 +36,7 @@
                 <p class="mt-2">We couldn't find any products matching <strong>"{{ $q }}"</strong>.</p>
                 <p class="mt-2">
                     Try a different search term, or
-                    <a href="{{ route('products.index') }}" class="text-sw-blue hover:underline">browse all products</a>.
+                    <a href="{{ route('products.index') }}" class="text-sw-teal hover:underline">browse all products</a>.
                 </p>
             </div>
 
@@ -56,7 +56,7 @@
 
                         <p class="m-0">
                             @if (!is_null($item->salePrice) && $item->salePrice > 0)
-                                <span class="text-sw-orange text-lg font-bold">${{ number_format($item->salePrice, 2) }}</span>
+                                <span class="text-sw-orange-dark text-lg font-bold">${{ number_format($item->salePrice, 2) }}</span>
                                 <span class="line-through text-gray-400 text-sm ml-1">${{ number_format($item->price, 2) }}</span>
                             @else
                                 <span class="text-lg font-bold text-gray-800">${{ number_format($item->price, 2) }}</span>

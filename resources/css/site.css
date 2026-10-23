@@ -19,13 +19,13 @@
 /* --- Orange "pill" heading --- */
 
 .pill-heading {
-    @apply bg-sw-orange text-white px-5 py-2.5 rounded-l-[40px];
+    @apply bg-sw-orange text-sw-dark px-5 py-2.5 rounded-l-[40px];
 }
 
 .pill-heading h1,
 .pill-heading h2,
 .pill-heading h3 {
-    @apply text-lg font-normal m-0 text-white;
+    @apply text-lg font-normal m-0 text-sw-dark;
 }
 
 

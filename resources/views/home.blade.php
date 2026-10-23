@@ -32,7 +32,7 @@
 
                     <p class="m-0">
                         @if (!is_null($item->salePrice) && $item->salePrice > 0)
-                            <span class="text-sw-orange text-lg font-bold">${{ number_format($item->salePrice, 2) }}</span>
+                            <span class="text-sw-orange-dark text-lg font-bold">${{ number_format($item->salePrice, 2) }}</span>
                             <span class="line-through text-gray-400 text-sm ml-1">${{ number_format($item->price, 2) }}</span>
                         @else
                             <span class="text-lg font-bold text-gray-800">${{ number_format($item->price, 2) }}</span>
@@ -62,7 +62,7 @@
         <div class="md:w-[300px] md:flex-shrink-0 px-5 py-4">
             <p class="text-base text-gray-800 m-0">
                 These are some of our top brands and partnerships.<br>
-                <a href="#" class="text-sw-blue font-semibold no-underline hover:underline">The best of the best is here.</a>
+                <a href="#" class="text-sw-teal font-semibold no-underline hover:underline">The best of the best is here.</a>
             </p>
         </div>
 

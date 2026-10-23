@@ -37,14 +37,14 @@
                     <td class="block md:table-cell md:p-3 before:content-['Category:_'] before:font-semibold before:text-sw-grey md:before:content-none">{{ $item->category->categoryName ?? '—' }}</td>
                     <td class="block md:table-cell md:p-3 md:text-right before:content-['Price:_'] before:font-semibold before:text-sw-grey md:before:content-none">
                         @if (!is_null($item->salePrice) && $item->salePrice > 0)
-                            <span class="text-sw-orange font-semibold">${{ number_format($item->salePrice, 2) }}</span>
+                            <span class="text-sw-orange-dark font-semibold">${{ number_format($item->salePrice, 2) }}</span>
                         @else
                             ${{ number_format($item->price, 2) }}
                         @endif
                     </td>
                     <td class="block md:table-cell md:p-3 before:content-['Featured:_'] before:font-semibold before:text-sw-grey md:before:content-none">{{ $item->featured ? 'Yes' : 'No' }}</td>
                     <td class="block md:table-cell md:p-3 md:text-right whitespace-nowrap mt-2 md:mt-0">
-                        <a href="{{ route('admin.items.edit', $item) }}" class="text-sw-blue hover:underline mr-4">Edit</a>
+                        <a href="{{ route('admin.items.edit', $item) }}" class="text-sw-teal hover:underline mr-4">Edit</a>
                         <form action="{{ route('admin.items.destroy', $item) }}" method="POST" class="inline" onsubmit="return confirm('Delete this product?')">
                             @csrf
                             @method('DELETE')

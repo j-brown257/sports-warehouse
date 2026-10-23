@@ -37,9 +37,9 @@
                     {{-- Price treatment --}}
                     <div class="mb-5">
                         @if (!is_null($item->salePrice) && $item->salePrice > 0)
-                            <span class="text-sw-orange text-3xl font-bold">${{ number_format($item->salePrice, 2) }}</span>
+                            <span class="text-sw-orange-dark text-3xl font-bold">${{ number_format($item->salePrice, 2) }}</span>
                             <span class="line-through text-gray-400 text-lg ml-2">${{ number_format($item->price, 2) }}</span>
-                            <span class="block text-sm text-sw-orange font-semibold mt-1">On sale!</span>
+                            <span class="block text-sm text-sw-orange-dark font-semibold mt-1">On sale!</span>
                         @else
                             <span class="text-3xl font-bold text-gray-800">${{ number_format($item->price, 2) }}</span>
                         @endif
@@ -67,7 +67,7 @@
         {{-- "Back to category" link --}}
         @if ($item->category)
             <div class="mt-6 text-center">
-                <a href="{{ route('categories.show', $item->category->slug) }}" class="text-sw-blue hover:underline">
+                <a href="{{ route('categories.show', $item->category->slug) }}" class="text-sw-teal hover:underline">
                     ← Back to {{ $item->category->categoryName }}
                 </a>
             </div>

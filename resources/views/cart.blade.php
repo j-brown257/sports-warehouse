@@ -87,7 +87,7 @@
                 </div>
                 {{-- Action buttons --}}
                 <div class="flex flex-col md:flex-row justify-between gap-3 mt-5">
-                    <a href="{{ route('products.index') }}" class="text-center px-6 py-2.5 bg-white border border-sw-blue text-sw-blue font-semibold rounded hover:bg-sw-blue hover:text-white transition-colors">
+                    <a href="{{ route('products.index') }}" class="text-center px-6 py-2.5 bg-white border border-sw-teal text-sw-teal font-semibold rounded hover:bg-sw-teal hover:text-white transition-colors">
                     ← Continue Shopping
                     </a>
                     <button type="submit" class="px-6 py-2.5 bg-white border border-gray-400 text-sw-grey font-semibold rounded hover:bg-gray-100 transition-colors">

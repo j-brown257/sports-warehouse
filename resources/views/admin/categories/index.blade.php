@@ -33,7 +33,7 @@
                             <td class="p-3">{{ $category->categoryName }}</td>
                             <td class="p-3">{{ $category->items()->count() }}</td>
                             <td class="p-3 text-right whitespace-nowrap">
-                                <a href="{{ route('admin.categories.edit', $category) }}" class="text-sw-blue hover:underline mr-4">Edit</a>
+                                <a href="{{ route('admin.categories.edit', $category) }}" class="text-sw-teal hover:underline mr-4">Edit</a>
                                 <form action="{{ route('admin.categories.destroy', $category) }}" method="POST" class="inline" onsubmit="return confirm('Delete this category?')">
                                     @csrf
                                     @method('DELETE')

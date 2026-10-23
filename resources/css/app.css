@@ -10,6 +10,7 @@
 
     --color-sw-blue: #00ACED;
     --color-sw-orange: #FB6806;
+    --color-sw-orange-dark: #BC4E05;  /* accessible text version of sw-orange, 4.96:1 on white (WCAG AA) */
     --color-sw-dark: #002936;
     --color-sw-teal: #006989;
     --color-sw-product: #0074A8;
