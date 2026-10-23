@@ -44,7 +44,7 @@
                 <textarea id="description" name="description" rows="4" class="contact-input resize-y">{{ old('description') }}</textarea>
 
                 <label class="contact-label mt-3">Photo</label>
-                <img id="imagePreview" src="{{ asset('assets/placeholder-image.png') }}" class="w-28 h-28 object-contain border border-gray-300 rounded mb-2 bg-white">
+                <img id="imagePreview" src="{{ asset('assets/placeholder-image.png') }}" alt="Product photo preview" class="w-28 h-28 object-contain border border-gray-300 rounded mb-2 bg-white">
                 <button type="button" id="removePhotoBtn" class="mt-2 text-sm text-red-600 hover:underline">Clear selection</button>
                 <input type="file" name="photo" id="imageInput" accept="image/*" class="block w-full text-sm text-sw-grey border border-gray-300 rounded cursor-pointer
                  file:mr-4 file:py-2.5 file:px-4 file:border-0 file:cursor-pointer

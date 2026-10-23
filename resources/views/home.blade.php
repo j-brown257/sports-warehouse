@@ -9,7 +9,7 @@
 <div class="hidden md:block">
     <div class="container-960 py-2">
         <a href="{{ route('categories.show', 'balls') }}">
-            <img src="{{ asset('assets/banner.png') }}" alt="Shop our range of sports balls" class="w-full h-auto block">
+            <img src="{{ asset('assets/banner.png') }}" alt="Shop our range of sports balls" width="961" height="340" class="w-full h-auto block">
         </a>
     </div>
 </div>
@@ -27,6 +27,7 @@
                 <a href="{{ route('items.show', $item->slug) }}" class="product-card block no-underline hover:shadow-md transition-shadow">
                     <img src="{{ $item->photo_url }}"
                          alt="{{ $item->itemName }}"
+                         width="500" height="500"
                          class="max-w-[100px] w-full h-auto mx-auto mb-2.5">
 
                     <p class="m-0">

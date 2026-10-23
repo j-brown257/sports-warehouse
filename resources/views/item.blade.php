@@ -26,6 +26,7 @@
                 <div class="md:w-1/2 mb-6 md:mb-0">
                     <img src="{{ $item->photo_url }}"
                          alt="{{ $item->itemName }}"
+                         width="500" height="500"
                          class="w-full max-w-[400px] h-auto mx-auto">
                 </div>
 

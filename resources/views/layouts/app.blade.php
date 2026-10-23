@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Sports Warehouse')</title>
+    <meta name="description" content="@yield('meta_description', 'Shop footwear, apparel and equipment across soccer, running, training and more at Sports Warehouse — fast delivery across Australia.')">
     <link rel="icon" type="image/png" href="{{ asset('assets/favicon.png') }}">
 
     {{-- Google Fonts: Open Sans --}}
@@ -19,11 +20,13 @@
 </head>
 <body class="font-sans text-gray-800 bg-white">
 
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-sw-dark focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
+
     {{-- ================ HEADER ================ --}}
     <header>
 
         {{-- Top nav bar (sky blue) --}}
-        <div class="bg-sw-blue text-white">
+        <div class="bg-sw-blue text-sw-dark">
             <div class="container-960 py-3 flex justify-between items-center gap-4">
                 <nav class="hidden md:flex items-center gap-4 text-sm">
                     <a href="{{ route('home') }}" class="hover:text-sw-orange whitespace-nowrap">Home</a>
@@ -69,8 +72,8 @@
     <input type="search" id="site-search" name="q" placeholder="Search products"
            value="{{ request('q') }}"
            class="w-full md:max-w-[220px] h-10 px-4 rounded-full border border-sw-grey bg-transparent text-sw-grey placeholder:text-sw-grey outline-none focus:outline-2 focus:outline-sw-orange">
-                    <button type="submit" class="w-10 h-10 flex-shrink-0 bg-sw-dark text-white rounded-full flex items-center justify-center hover:bg-sw-orange">
-                        <i class="fas fa-search"></i>
+                    <button type="submit" aria-label="Search" class="w-10 h-10 flex-shrink-0 bg-sw-dark text-white rounded-full flex items-center justify-center hover:bg-sw-orange">
+                        <i class="fas fa-search" aria-hidden="true"></i>
                     </button>
                 </form>
             </div>
@@ -93,13 +96,13 @@
     </header>
 
     {{-- ================ MAIN CONTENT ================ --}}
-    <main>
+    <main id="main-content">
         @yield('content')
     </main>
 
     {{-- ================ FOOTER ================ --}}
     <footer>
-        <div class="bg-sw-blue text-white">
+        <div class="bg-sw-blue text-sw-dark">
             <div class="container-960 py-6 flex flex-col md:flex-row md:justify-between md:items-stretch gap-6 md:gap-7">
 
                 {{-- Column 1: Site nav --}}
@@ -141,10 +144,10 @@
 
                         ] as $social)
                             <a href="#" class="flex flex-col items-center group">
-                                <span class="text-3xl border border-white rounded-full w-[68px] h-[68px] flex items-center justify-center text-white group-hover:bg-sw-orange transition-colors">
+                                <span class="text-3xl border border-white rounded-full w-[68px] h-[68px] flex items-center justify-center text-sw-dark group-hover:bg-sw-orange transition-colors">
                                     <i class="{{ $social['icon'] }}"></i>
                                 </span>
-                                <span class="mt-2 text-sm text-white group-hover:text-sw-orange transition-colors">{{ $social['label'] }}</span>
+                                <span class="mt-2 text-sm text-sw-dark group-hover:text-sw-orange transition-colors">{{ $social['label'] }}</span>
                             </a>
                         @endforeach
                     </div>

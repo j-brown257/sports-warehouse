@@ -27,9 +27,9 @@ class ItemController extends Controller
             'itemName'    => 'required|string|max:150',
             'categoryId'  => 'required|exists:category,categoryId',
             'price'       => 'required|numeric|min:0',
-            'salePrice'   => 'nullable|numeric|min:0',
+            'salePrice'   => 'nullable|numeric|min:0|lt:price',
             'description' => 'nullable|string|max:2000',
-            'photo'       => 'nullable|image|max:2048',
+            'photo'       => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
             'featured'    => 'nullable|boolean',
         ]);
 
@@ -64,9 +64,9 @@ class ItemController extends Controller
             'itemName'    => 'required|string|max:150',
             'categoryId'  => 'required|exists:category,categoryId',
             'price'       => 'required|numeric|min:0',
-            'salePrice'   => 'nullable|numeric|min:0',
+            'salePrice'   => 'nullable|numeric|min:0|lt:price',
             'description' => 'nullable|string|max:2000',
-            'photo'       => 'nullable|image|max:2048',
+            'photo'       => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
             'featured'    => 'nullable|boolean',
         ]);
 

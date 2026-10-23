@@ -44,7 +44,7 @@
                             @foreach ($cart as $line)
                                 <tr class="border-b border-gray-100">
                                     <td class="p-3 w-[70px]">
-                                        <img src="{{ asset('assets/' . $line['photo']) }}" alt="{{ $line['name'] }}" class="w-14 h-14 object-contain" onerror="this.src='{{ asset('assets/placeholder-image.png') }}'">
+                                        <img src="{{ asset('assets/' . $line['photo']) }}" alt="{{ $line['name'] }}" width="500" height="500" class="w-14 h-14 object-contain" onerror="this.src='{{ asset('assets/placeholder-image.png') }}'">
                                     </td>
                                     <td class="p-3">
                                         <a href="{{ route('items.show', $line['slug']) }}"

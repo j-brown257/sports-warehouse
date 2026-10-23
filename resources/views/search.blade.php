@@ -51,6 +51,7 @@
                 @foreach ($items as $item)
                         <a href="{{ route('items.show', $item->slug) }}" class="product-card block no-underline hover:shadow-md transition-shadow">
                         <img src="{{ asset('assets/' . $item->photo_url) }}" alt="{{ $item->itemName }}"
+                             width="500" height="500"
                              class="max-w-[100px] w-full h-auto mx-auto mb-2.5">
 
                         <p class="m-0">
