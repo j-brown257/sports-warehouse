@@ -57,7 +57,7 @@
                         <p class="m-0">
                             @if (!is_null($item->salePrice) && $item->salePrice > 0)
                                 <span class="text-sw-orange-dark text-lg font-bold">${{ number_format($item->salePrice, 2) }}</span>
-                                <span class="line-through text-gray-400 text-sm ml-1">${{ number_format($item->price, 2) }}</span>
+                                <span class="line-through text-sw-grey text-sm ml-1">${{ number_format($item->price, 2) }}</span>
                             @else
                                 <span class="text-lg font-bold text-gray-800">${{ number_format($item->price, 2) }}</span>
                             @endif

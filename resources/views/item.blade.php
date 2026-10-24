@@ -38,7 +38,7 @@
                     <div class="mb-5">
                         @if (!is_null($item->salePrice) && $item->salePrice > 0)
                             <span class="text-sw-orange-dark text-3xl font-bold">${{ number_format($item->salePrice, 2) }}</span>
-                            <span class="line-through text-gray-400 text-lg ml-2">${{ number_format($item->price, 2) }}</span>
+                            <span class="line-through text-sw-grey text-lg ml-2">${{ number_format($item->price, 2) }}</span>
                             <span class="block text-sm text-sw-orange-dark font-semibold mt-1">On sale!</span>
                         @else
                             <span class="text-3xl font-bold text-gray-800">${{ number_format($item->price, 2) }}</span>
