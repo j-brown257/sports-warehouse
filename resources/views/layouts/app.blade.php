@@ -7,13 +7,18 @@
     <meta name="description" content="@yield('meta_description', 'Shop footwear, apparel and equipment across soccer, running, training and more at Sports Warehouse — fast delivery across Australia.')">
     <link rel="icon" type="image/png" href="{{ asset('assets/favicon.png') }}">
 
-    {{-- Google Fonts: Open Sans --}}
+    {{-- Google Fonts: Open Sans — loaded async so it doesn't block rendering --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"></noscript>
 
-    {{-- Font Awesome icons --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    {{-- Font Awesome icons — only ~11 icons are used site-wide, but all.min.css ships the
+         entire library, so this is deferred the same way to stop it blocking the first paint --}}
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 
     {{-- Tailwind compiled by Vite --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
