@@ -14,11 +14,10 @@
           onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"></noscript>
 
-    {{-- Font Awesome icons — only ~11 icons are used site-wide, but all.min.css ships the
-         entire library, so this is deferred the same way to stop it blocking the first paint --}}
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-          onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+    {{-- Font Awesome icons — loaded normally (not deferred like the font above): deferring
+         it caused icons across the header/footer to visibly pop in after first paint, which
+         measurably hurt Speed Index on mobile retest more than the render-blocking saved --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     {{-- Tailwind compiled by Vite --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
