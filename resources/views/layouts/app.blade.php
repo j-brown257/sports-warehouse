@@ -52,7 +52,7 @@
                     <a href="{{ route('cart.index') }}" class="hover:text-sw-orange whitespace-nowrap">
                         <i class="fas fa-shopping-cart mr-1.5"></i> View Cart
                     </a>
-                    <a href="{{ route('cart.index') }}" class="inline-block px-4 py-1 rounded-full bg-black/15 hover:bg-sw-orange whitespace-nowrap">
+                    <a href="{{ route('cart.index') }}" class="inline-block px-4 py-1 rounded-full bg-sw-dark text-white hover:bg-sw-orange whitespace-nowrap">
                         {{ $cartCount }} {{ $cartCount == 1 ? 'item' : 'items' }}
                     </a>
                 </div>

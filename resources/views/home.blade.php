@@ -69,15 +69,16 @@
         <div class="bg-sw-dark md:flex-1 px-4 py-4 md:pl-10 md:pr-2.5 md:py-5 md:rounded-l-[50px]">
             <div class="grid grid-cols-3 md:flex md:justify-between gap-4 md:gap-5 items-center">
                 @foreach ([
-                    ['file' => 'logo_nike.png',       'alt' => 'Nike'],
-                    ['file' => 'logo_adidas.png',     'alt' => 'Adidas'],
-                    ['file' => 'logo_skins.png',      'alt' => 'Skins'],
-                    ['file' => 'logo_asics.png',      'alt' => 'Asics'],
-                    ['file' => 'logo_newbalance.png', 'alt' => 'New Balance'],
-                    ['file' => 'logo_wilson.png',     'alt' => 'Wilson'],
+                    ['file' => 'logo_nike.png',       'alt' => 'Nike',        'w' => 81, 'h' => 29],
+                    ['file' => 'logo_adidas.png',     'alt' => 'Adidas',      'w' => 81, 'h' => 53],
+                    ['file' => 'logo_skins.png',      'alt' => 'Skins',       'w' => 81, 'h' => 19],
+                    ['file' => 'logo_asics.png',      'alt' => 'Asics',       'w' => 81, 'h' => 27],
+                    ['file' => 'logo_newbalance.png', 'alt' => 'New Balance', 'w' => 81, 'h' => 43],
+                    ['file' => 'logo_wilson.png',     'alt' => 'Wilson',      'w' => 81, 'h' => 19],
                 ] as $brand)
                     <img src="{{ asset('assets/' . $brand['file']) }}"
                          alt="{{ $brand['alt'] }} logo"
+                         width="{{ $brand['w'] }}" height="{{ $brand['h'] }}"
                          class="max-h-8 md:max-h-10 object-contain brightness-0 invert mx-auto md:mx-0">
                 @endforeach
             </div>
