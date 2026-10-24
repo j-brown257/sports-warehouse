@@ -9,7 +9,7 @@
 <div class="hidden md:block">
     <div class="container-960 py-2">
         <a href="{{ route('categories.show', 'balls') }}">
-            <img src="{{ asset('assets/banner.png') }}" alt="Shop our range of sports balls" width="961" height="340" class="w-full h-auto block">
+            <img src="{{ asset('assets/banner.jpg') }}" alt="Shop our range of sports balls" width="961" height="340" class="w-full h-auto block">
         </a>
     </div>
 </div>
