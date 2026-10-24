@@ -69,6 +69,7 @@
                 <a href="{{ route('home') }}" class="block">
                     <img src="{{ asset('assets/sports-warehouse-logo-600.png') }}"
                          alt="Sports Warehouse"
+                         width="600" height="82"
                          class="max-h-[60px] md:max-h-[83px] w-auto">
                 </a>
                 <form action="{{ route('search') }}" method="GET" role="search" class="flex items-center gap-2 w-full md:w-auto">
