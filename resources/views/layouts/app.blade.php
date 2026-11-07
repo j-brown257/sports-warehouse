@@ -80,8 +80,20 @@
                     <button type="submit" aria-label="Search" class="w-10 h-10 flex-shrink-0 bg-sw-dark text-white rounded-full flex items-center justify-center hover:bg-sw-orange">
                         <i class="fas fa-search" aria-hidden="true"></i>
                     </button>
+                    {{-- Voice search proof of concept: mic button, wired up in resources/js/voice-search.js --}}
+                    <button type="button" id="voice-search-btn" aria-label="Search by voice" title="Search by voice"
+                            class="w-10 h-10 flex-shrink-0 bg-sw-teal text-white rounded-full flex items-center justify-center hover:bg-sw-orange">
+                        <i class="fas fa-microphone" aria-hidden="true"></i>
+                    </button>
                 </form>
             </div>
+
+            {{-- Voice search permission-help message: shown by resources/js/voice-search.js
+                 only when the browser confirms microphone access was actually denied, with
+                 instructions matched to which iOS browser is being used --}}
+            <p id="voice-search-fallback" role="status"
+               class="hidden text-sm text-sw-orange text-right md:text-left -mt-2 mb-2">
+            </p>
 
             {{-- Category nav: pulls categories from the database --}}
             @php
@@ -159,6 +171,8 @@
                 </div>
             </div>
         </div>
+
+        @include('partials.newsletter', ['footerCategories' => $footerCategories])
 
         {{-- Sub-footer --}}
         <div class="bg-white text-sw-grey text-center text-xs px-4 py-2.5">

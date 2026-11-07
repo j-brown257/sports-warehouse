@@ -23,7 +23,7 @@ class Item extends Model
         return Str::slug($this->itemName);
     }
 
-    protected $fillable = ['itemName', 'photo', 'price', 'salePrice', 'description', 'featured', 'categoryId'];
+    protected $fillable = ['itemName', 'brand', 'photo', 'price', 'salePrice', 'description', 'featured', 'categoryId'];
 
     protected $casts = [
     'price'      => 'decimal:2',
